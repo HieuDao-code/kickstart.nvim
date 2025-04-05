@@ -620,6 +620,12 @@ require('lazy').setup({
               vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
             end, '[T]oggle Inlay [H]ints')
           end
+
+          -- Disable hover capability of Ruff
+          if client and client.name == 'ruff' then
+            -- Disable hover in favor of Pyright
+            client.server_capabilities.hoverProvider = false
+          end
         end,
       })
 
@@ -682,6 +688,24 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
+        pyright = {
+          settings = {
+            pyright = {
+              -- Using Ruff's import organizer
+              disableOrganizeImports = true,
+            },
+            python = {
+              analysis = {
+                diagnosticSeverityOverrides = {
+                  -- https://github.com/microsoft/pyright/blob/main/docs/configuration.md#type-check-diagnostics-settings
+                  -- Overwrite Rules which clash with Ruff to keep the Type cheching from Pyright
+                  reportUndefinedVariable = 'none',
+                },
+              },
+            },
+          },
+        },
+        ruff = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -714,6 +738,8 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'ruff', -- Used to lint and format Python code
+        'pyright', -- Static type checker for Python
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -767,7 +793,14 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
+        python = {
+          -- To fix auto-fixable lint errors.
+          'ruff_fix',
+          -- To run the Ruff formatter.
+          'ruff_format',
+          -- To organize the imports.
+          'ruff_organize_imports',
+        },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -980,7 +1013,6 @@ require('lazy').setup({
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
-
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
@@ -1029,12 +1061,5 @@ require('lazy').setup({
   },
 })
 
-require('lspconfig').ruff.setup {
-  init_options = {
-    settings = {
-      -- Ruff language server settings go here
-    },
-  },
-}
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
