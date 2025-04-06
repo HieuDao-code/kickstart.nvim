@@ -32,7 +32,7 @@ return {
       return '%2l:%-2v'
     end
 
-    -- ... and there is more!
-    --  Check out: https://github.com/echasnovski/mini.nvim
+    --Move any selection in any direction
+    require('mini.move').setup()
   end,
 }
