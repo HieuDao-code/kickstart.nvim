@@ -1,6 +1,6 @@
 require 'config.lazy'
 
-require('lazy').setup('plugins', {
+require('lazy').setup('hieu.plugins', {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
@@ -155,7 +155,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --  Here are some example plugins that I've included in the Kickstart repository.
 --  Uncomment any of the lines below to enable them (you will need to restart nvim).
 --
-require 'kickstart.plugins.debug'
+-- require 'kickstart.plugins.debug'
 -- require 'kickstart.plugins.indent_line',
 -- require 'kickstart.plugins.lint',
 -- require 'kickstart.plugins.autopairs',
