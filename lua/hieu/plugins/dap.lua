@@ -39,10 +39,6 @@ return {
       -- Makes a best effort to setup the various debuggers with
       -- reasonable debug configurations
       automatic_installation = true,
-
-      -- You can provide additional configuration to the handlers,
-      -- see mason-nvim-dap README for more information
-      handlers = {},
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
         'debugpy', -- Python Debug Adapter Protocol
