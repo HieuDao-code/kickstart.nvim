@@ -268,6 +268,7 @@ return {
         'ruff', -- Used to lint and format Python code
         'pyright', -- Static type checker for Python
       })
+
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
