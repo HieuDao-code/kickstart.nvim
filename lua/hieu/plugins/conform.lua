@@ -1,11 +1,6 @@
--- Autoformat
+-- Autoformatter
 return {
   'stevearc/conform.nvim',
-  dependencies = {
-    -- Automatically formatters to stdpath for Neovim
-    'williamboman/mason.nvim',
-    'WhoIsSethDaniel/mason-tool-installer.nvim',
-  },
   event = { 'BufWritePre' },
   cmd = { 'ConformInfo' },
   keys = {
@@ -38,14 +33,4 @@ return {
       },
     },
   },
-  config = function(_, opts)
-    -- Ensure the servers and tools above are installed
-    require('mason-tool-installer').setup {
-      ensure_installed = {
-        'stylua', -- Used to format Lua code
-        'ruff', -- Used tm lint and format Python code
-        'pyright', -- Static type checker for Python
-      },
-    }
-  end,
 }
