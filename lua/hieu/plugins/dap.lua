@@ -9,7 +9,7 @@ return {
     'nvim-neotest/nvim-nio',
 
     -- Installs the debug adapters for you
-    {'williamboman/mason.nvim', opts = {}},
+    { 'williamboman/mason.nvim', opts = {} },
     'jay-babu/mason-nvim-dap.nvim',
 
     -- Add your own debuggers here
@@ -34,16 +34,6 @@ return {
     vim.keymap.set('n', '<leader>dn', dap_python.test_method, { desc = 'Debug: Test Method' })
     vim.keymap.set('n', '<leader>df', dap_python.test_class, { desc = 'Debug: Test Class' })
     vim.keymap.set('n', '<leader>ds', dap_python.debug_selection, { desc = 'Debug: Debug Selection' })
-
-    require('mason-nvim-dap').setup {
-      -- Makes a best effort to setup the various debuggers with
-      -- reasonable debug configurations
-      automatic_installation = true,
-      ensure_installed = {
-        -- Update this to ensure that you have the debuggers for the langs you want
-        'debugpy', -- Python Debug Adapter Protocol
-      },
-    }
 
     -- Dap UI setup
     -- For more information, see |:help nvim-dap-ui|
