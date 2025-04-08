@@ -19,7 +19,6 @@ I use the plugin manager [**lazy.nvim**](https://github.com/folke/lazy.nvim) to 
 
 | Name | Purpose | Dependencies | Notes |
 | ---- | ------- | ------------ | ----- |
-| [fidget.nvim](https://github.com/j-hui/fidget.nvim) |  |  |  |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) |  |  |  |
 | [conform.nvim](https://github.com/stevearc/conform.nvim) |  |  |  |
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) |  |  |  |
@@ -45,6 +44,7 @@ I use the plugin manager [**lazy.nvim**](https://github.com/folke/lazy.nvim) to 
 
 | Name | Purpose | Dependencies | Notes |
 | ---- | ------- | ------------ | ----- |
+| [fidget.nvim](https://github.com/j-hui/fidget.nvim) |  |  |  |
 | [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) |  |  |  |
 | [which-key.nvim](https://github.com/folke/which-key.nvim) |  |  |  |
 | [mini.nvim](https://github.com/echasnovski/mini.nvim) |  |  |  |
