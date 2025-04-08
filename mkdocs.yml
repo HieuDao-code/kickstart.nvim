@@ -1,1 +1,4 @@
 site_name: My Docs
+site_url: https://hieudao-code.github.io/kickstart.nvim/
+theme:
+  name: material
