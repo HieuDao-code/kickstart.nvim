@@ -1,4 +1,4 @@
-require 'config.autocmds'
-require 'config.keymaps'
-require 'config.lazy'
-require 'config.options'
+require 'hieu.config.autocmds'
+require 'hieu.config.keymaps'
+require 'hieu.config.lazy'
+require 'hieu.config.options'
