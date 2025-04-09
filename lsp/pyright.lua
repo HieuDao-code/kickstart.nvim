@@ -11,7 +11,7 @@ return {
   },
   settings = {
     pyright = {
-      -- UsingRuff's import organizer
+      -- Using Ruff's import organizer
       disableOrganizeImports = true,
     },
     python = {
