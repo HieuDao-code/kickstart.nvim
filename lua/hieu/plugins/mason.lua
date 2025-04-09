@@ -23,11 +23,6 @@ return {
     opts = {
       ensure_installed = { 'lua_ls', 'pyright', 'ruff', 'marksman', 'yamlls', 'taplo' },
     },
-    handers = {
-      function(server_name)
-        vim.lsp.enable(server_name)
-      end,
-    },
   },
   -- Installs the debug adapters for you
   {
