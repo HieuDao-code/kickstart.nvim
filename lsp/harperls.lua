@@ -17,7 +17,7 @@ return {
     'cmake',
   },
   settings = {
-    harper_ls = {
+    ['harper-ls'] = {
       linters = {
         SentenceCapitalization = false,
         SpellCheck = false,

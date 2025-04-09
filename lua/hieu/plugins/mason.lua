@@ -25,18 +25,4 @@ return {
       ensure_installed = { 'lua_ls', 'pyright', 'ruff', 'marksman', 'yamlls', 'taplo' },
     },
   },
-  -- Installs the debug adapters for you
-  {
-    'jay-babu/mason-nvim-dap.nvim',
-    dependencies = { 'williamboman/mason.nvim' },
-    opts = {
-      -- Makes a best effort to setup the various debuggers with
-      -- reasonable debug configurations
-      automatic_installation = true,
-      ensure_installed = {
-        -- Update this to ensure that you have the debuggers for the langs you want
-        'debugpy', -- Python Debug Adapter Protocol
-      },
-    },
-  },
 }

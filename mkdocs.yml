@@ -4,7 +4,6 @@ theme:
   name: material
   features: content.code.copy
   palette:
-
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
@@ -13,7 +12,7 @@ theme:
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -26,3 +25,7 @@ theme:
         name: Switch to system preference
 markdown_extensions:
   - abbr
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
