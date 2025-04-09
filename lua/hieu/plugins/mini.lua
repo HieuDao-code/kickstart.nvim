@@ -34,6 +34,9 @@ return {
     --Move any selection in any direction
     require('mini.move').setup()
 
+    -- Mini icons
+    require('mini.icons').setup()
+
     -- Autopairs
     require('mini.pairs').setup()
   end,

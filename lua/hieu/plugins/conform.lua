@@ -32,5 +32,7 @@ return {
         'ruff_organize_imports',
       },
     },
+    markdown = { 'prettier' },
+    json = { 'prettier' },
   },
 }

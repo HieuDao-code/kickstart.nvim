@@ -22,10 +22,10 @@ I use the plugin manager [**lazy.nvim**](https://github.com/folke/lazy.nvim) to 
 | [blink.nvim](https://github.com/Saghen/blink.cmp) | A completion plugin with support for LSPs and external sources |  |  |
 | [conform.nvim](https://github.com/stevearc/conform.nvim) | Formatter plugin |  |  |
 | [iron.nvim](https://github.com/Vigemus/iron.nvim) | Interactive REPL (Read–Eval–Print Loop) |  |  |
-| [mini.pairs](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md) | Autocomplete autopairs, e.g. [],{},() etc. |  |  |
 | [mini.ai](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md) | Extend and create a/i textobjects |  |  |
-| [mini.surround](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md) | Fast and feature-rich surround actions |  |  |
 | [mini.move](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-move.md#features) | Move any selection in any direction |  |  |
+| [mini.pairs](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md) | Autocomplete autopairs, e.g. [],{},() etc. |  |  |
+| [mini.surround](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md) | Fast and feature-rich surround actions |  |  |
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) | Debug Adapter Protocol client implementation |  |  |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Parser generator tool and incremental parsing library |  |  |
 | [snacks.indent](https://github.com/folke/snacks.nvim/blob/main/docs/indent.md) | Adds indentation guides even on blank lines |  |  |

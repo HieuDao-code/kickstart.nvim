@@ -10,6 +10,7 @@ return {
         'stylua', -- Used to format Lua code
         'ruff', -- Used tm lint and format Python code
         'pyright', -- Static type checker for Python
+        'prettier', -- Prettier is an opinionated code formatter
       },
     },
   },
@@ -19,7 +20,7 @@ return {
     'williamboman/mason-lspconfig.nvim',
     dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
     opts = {
-      ensure_installed = { 'lua_ls', 'pyright', 'ruff' },
+      ensure_installed = { 'lua_ls', 'pyright', 'ruff', 'marksman' },
     },
   },
 
