@@ -21,8 +21,10 @@ return {
       lsp_format = 'fallback',
     },
     formatters_by_ft = {
-      lua = { 'stylua' },
       -- Conform can also run multiple formatters sequentially
+      json = { 'prettier' },
+      lua = { 'stylua' },
+      markdown = { 'prettier' },
       python = {
         -- To fix auto-fixable lint errors.
         'ruff_fix',
@@ -31,8 +33,8 @@ return {
         -- To organize the imports.
         'ruff_organize_imports',
       },
+      toml = { 'taplo' },
+      yaml = { 'prettier' },
     },
-    markdown = { 'prettier' },
-    json = { 'prettier' },
   },
 }

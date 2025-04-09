@@ -11,6 +11,7 @@ return {
         'ruff', -- Used tm lint and format Python code
         'pyright', -- Static type checker for Python
         'prettier', -- Prettier is an opinionated code formatter
+        'taplo',
       },
     },
   },
@@ -20,7 +21,7 @@ return {
     'williamboman/mason-lspconfig.nvim',
     dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
     opts = {
-      ensure_installed = { 'lua_ls', 'pyright', 'ruff', 'marksman' },
+      ensure_installed = { 'lua_ls', 'pyright', 'ruff', 'marksman', 'yamlls', 'taplo' },
     },
   },
 
