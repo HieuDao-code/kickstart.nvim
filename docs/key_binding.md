@@ -8,7 +8,7 @@
 - `:Lazy` show package manager UI
 - `:Mason` show Mason UI
 - `:TSUpdate` update all Tree-sitter parsers
-- `:ConformInfo` useful to debug why a formatter times out
+- `:ConformInfo` autoformatter information
 
 <!-- ## NAVIGATING -->
 <!---->

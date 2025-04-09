@@ -8,10 +8,10 @@ return {
     opts = {
       ensure_installed = {
         'stylua', -- Used to format Lua code
-        'ruff', -- Used tm lint and format Python code
+        'ruff', -- Used to lint and format Python code
         'pyright', -- Static type checker for Python
         'prettier', -- Prettier is an opinionated code formatter
-        'taplo',
+        'taplo', -- Used to lint and format toml files
       },
     },
   },
@@ -23,8 +23,12 @@ return {
     opts = {
       ensure_installed = { 'lua_ls', 'pyright', 'ruff', 'marksman', 'yamlls', 'taplo' },
     },
+    handers = {
+      function(server_name)
+        vim.lsp.enable(server_name)
+      end,
+    },
   },
-
   -- Installs the debug adapters for you
   {
     'jay-babu/mason-nvim-dap.nvim',

@@ -50,3 +50,6 @@ require('lazy').setup {
 
 require 'hieu.config.autocmds'
 require 'hieu.config.keymaps'
+
+-- -- LSP activation (references lsp/<filename>)
+-- vim.lsp.enable(require('mason-lspconfig').get_installed_servers())
