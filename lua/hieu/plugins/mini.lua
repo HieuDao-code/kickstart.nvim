@@ -33,5 +33,8 @@ return {
 
     --Move any selection in any direction
     require('mini.move').setup()
+
+    -- Autopairs
+    require('mini.pairs').setup()
   end,
 }

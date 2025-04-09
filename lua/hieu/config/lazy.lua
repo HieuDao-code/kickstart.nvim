@@ -22,6 +22,8 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
 
+require 'hieu.config.options'
+
 -- Setup lazy.nvim
 require('lazy').setup {
   spec = 'hieu.plugins',
@@ -45,3 +47,6 @@ require('lazy').setup {
     },
   },
 }
+
+require 'hieu.config.autocmds'
+require 'hieu.config.keymaps'

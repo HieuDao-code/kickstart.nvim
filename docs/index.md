@@ -13,43 +13,50 @@ git clone https://github.com/<REPO>/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME
 ```
 ## Plugins
 
-I use the plugin manager [**lazy.nvim**](https://github.com/folke/lazy.nvim) to install all plugins.
+I use the plugin manager [**lazy.nvim**](https://github.com/folke/lazy.nvim) to install all plugins. I also use [mini.nvim](https://github.com/echasnovski/mini.nvim) and [snacks.nvim](https://github.com/folke/snacks.nvim/tree/main?tab=readme-ov-file), two collection of plugins for Neovim.
 
 ### Working on text and code
 
 | Name | Purpose | Dependencies | Notes |
 | ---- | ------- | ------------ | ----- |
-| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) |  |  |  |
-| [conform.nvim](https://github.com/stevearc/conform.nvim) |  |  |  |
-| [nvim-dap](https://github.com/mfussenegger/nvim-dap) |  |  |  |
-| [iron.nvim](https://github.com/Vigemus/iron.nvim) |  |  |  |
+| [blink.nvim](https://github.com/Saghen/blink.cmp) | A completion plugin with support for LSPs and external sources |  |  |
+| [conform.nvim](https://github.com/stevearc/conform.nvim) | Formatter plugin |  |  |
+| [iron.nvim](https://github.com/Vigemus/iron.nvim) | Interactive REPL (Read–Eval–Print Loop) |  |  |
+| [mini.pairs](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md) | Autocomplete autopairs, e.g. [],{},() etc. |  |  |
+| [mini.ai](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md) | Extend and create a/i textobjects |  |  |
+| [mini.surround](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md) | Fast and feature-rich surround actions |  |  |
+| [mini.move](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-move.md#features) | Move any selection in any direction |  |  |
+| [nvim-dap](https://github.com/mfussenegger/nvim-dap) | Debug Adapter Protocol client implementation |  |  |
+| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Parser generator tool and incremental parsing library |  |  |
+| [snacks.indent](https://github.com/folke/snacks.nvim/blob/main/docs/indent.md) | Adds indentation guides even on blank lines |  |  |
+| [snacks.zen](https://github.com/folke/snacks.nvim/blob/main/docs/zen.md) | Zen mode, distraction-free coding |  |  |
+| [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | Highlight your todo comments in different styles |  |  |
+| [vim-sleuth](https://github.com/tpope/vim-sleuth) | Smart indentation style detection |  |  |
 
 ### Working with files and navigating between files
 
 | Name | Purpose | Dependencies | Notes |
 | ---- | ------- | ------------ | ----- |
-| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) |  |  |  |
-| [oil.nvim](https://github.com/stevearc/oil.nvim) |  |  |  |
-| [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) |  |  |  |
-| [tmux](https://github.com/tmux/tmux) |  |  |  |
+| [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) | Auto updating and editable marks utility for fast file navigation |  |  |
+| [oil.nvim](https://github.com/stevearc/oil.nvim) | File Explorer that lets you edit your filesystem like a normal Neovim buffer |  |  |
+| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder |  |  |
+| [tmux](https://github.com/tmux/tmux) | Terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen |  |  |
 
 ### Git Integration
 
 | Name | Purpose | Dependencies | Notes |
 | ---- | ------- | ------------ | ----- |
-| [vim-fugitive](https://github.com/tpope/vim-fugitive) |  |  |  |
-| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) |  |  |  |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Deep buffer integration for Git |  |  |
+| [vim-fugitive](https://github.com/tpope/vim-fugitive) | Vim plugin for Git |  |  |
 
 ### Miscellaneous
 
 | Name | Purpose | Dependencies | Notes |
 | ---- | ------- | ------------ | ----- |
-| [fidget.nvim](https://github.com/j-hui/fidget.nvim) |  |  |  |
-| [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) |  |  |  |
-| [which-key.nvim](https://github.com/folke/which-key.nvim) |  |  |  |
-| [mini.nvim](https://github.com/echasnovski/mini.nvim) |  |  |  |
-| [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) |  |  |  |
-| [nvim-autopairs](https://github.com/windwp/nvim-autopairs) |  |  |  |
+| [fidget.nvim](https://github.com/j-hui/fidget.nvim) | Extensible UI for Neovim notifications and LSP progress messages |  |  |
+| [mini.icons](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-icons.md) | File and folder icons |  |  |
+| [mini.statusline](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-statusline.md) | Minimal and fast statusline module |  |  |
+| [which-key.nvim](https://github.com/folke/which-key.nvim) | Show available keybindings in a popup as you type |  |  |
 | []() |  |  |  |
 
 ## Language Server Protocol, Debug Adapter Protocol, Linter and Formatter
@@ -59,9 +66,9 @@ The LSP (Language Server Protocol), DAP (Debug Adapter Protocol), Linter and For
 
 | Name | Language | Purpose | Notes |
 | -----|----------|---------| ----- |
-| [**pyright**](https://github.com/Microsoft/pyright) | Python | LSP | Need to install [Node.js](https://github.com/nodesource/distributions?tab=readme-ov-file#debian-and-ubuntu-based-distributions) because Pyright is written in Typescript. |
-| [**ruff**](https://github.com/astral-sh/ruff) | Python | LSP, Linter and Formatter | Ruff LSP will be an alternative to pyright [soon](https://github.com/astral-sh/ruff/discussions/16455). |
 | [**debugpy**](https://github.com/microsoft/debugpy) | Python | DAP | |
 | [**lua_ls**](https://github.com/LuaLS/lua-language-server) | Lua | LSP | [lazydev.nvim](https://github.com/folke/lazydev.nvim) is a plugin that properly configures LuaLS. |
+| [**pyright**](https://github.com/Microsoft/pyright) | Python | LSP | Need to install [Node.js](https://github.com/nodesource/distributions?tab=readme-ov-file#debian-and-ubuntu-based-distributions) because Pyright is written in Typescript. Ruff LSP will be an alternative to pyright [soon](https://github.com/astral-sh/ruff/discussions/16455). |
+| [**ruff**](https://github.com/astral-sh/ruff) | Python | LSP, Linter and Formatter |  |
 | [**stylua**](https://github.com/JohnnyMorganz/StyLua) | Lua | Formatter | |
 
