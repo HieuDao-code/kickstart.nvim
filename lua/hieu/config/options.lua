@@ -1,5 +1,5 @@
 -- LSP activation (references lsp/<filename>)
-vim.lsp.enable { 'luals', 'pyright', 'ruff', 'marksman', 'yaml', 'taplo' }
+vim.lsp.enable { 'luals', 'pyright', 'ruff', 'marksman', 'yaml', 'taplo', 'harperls' }
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true

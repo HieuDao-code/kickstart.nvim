@@ -12,6 +12,7 @@ return {
         'pyright', -- Static type checker for Python
         'prettier', -- Prettier is an opinionated code formatter
         'taplo', -- Used to lint and format toml files
+        'harper-ls', -- Spell checker
       },
     },
   },
