@@ -14,6 +14,24 @@ return {
       n_lines = 500,
     }
 
+    --Move any selection in any direction
+    require('mini.move').setup()
+
+    -- Mini icons
+    require('mini.icons').setup()
+
+    -- Simple and easy statusline.
+    local statusline = require 'mini.statusline'
+    -- set use_icons to true if you have a Nerd Font
+    statusline.setup { use_icons = vim.g.have_nerd_font }
+
+    -- You can configure sections in the statusline by overriding their
+    -- default behavior. For example, here we set the section for
+    -- cursor location to LINE:COLUMN
+    statusline.section_location = function()
+      return '%2l:%-2v'
+    end
+
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
     require('mini.surround').setup {
       mappings = {
@@ -32,24 +50,10 @@ return {
       search_method = 'cover_or_next',
     }
 
-    -- Simple and easy statusline.
-    --  You could remove this setup call if you don't like it,
-    --  and try some other statusline plugin
-    local statusline = require 'mini.statusline'
-    -- set use_icons to true if you have a Nerd Font
-    statusline.setup { use_icons = vim.g.have_nerd_font }
-
-    -- You can configure sections in the statusline by overriding their
-    -- default behavior. For example, here we set the section for
-    -- cursor location to LINE:COLUMN
-    statusline.section_location = function()
-      return '%2l:%-2v'
-    end
-
-    --Move any selection in any direction
-    require('mini.move').setup()
-
-    -- Mini icons
-    require('mini.icons').setup()
+    -- Remap adding surrounding to Visual mode selection
+    vim.keymap.del('x', 'ys')
+    vim.keymap.set('x', 'S', [[:<C-u>lua MiniSurround.add('visual')<CR>]], { silent = true })
+    -- Make special mapping for "add surrounding for line"
+    vim.keymap.set('n', 'yss', 'ys_', { remap = true })
   end,
 }
