@@ -26,7 +26,7 @@
 
 #### <abbr title="conform.nvim">Autoformatter</abbr>
 
-- `<leader>` format
+- `<leader>f` format
 
 #### Text editing
 
