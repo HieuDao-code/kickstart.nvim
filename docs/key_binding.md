@@ -1,6 +1,9 @@
 # Key bindings
 
-## BASICS
+- `<CR>` Enter
+- `<M>` Meta (Alt)
+
+## Information
 
 - `<space>` leader key
 - `:checkhealth [<pluginname>]` check base or plugin status
@@ -9,6 +12,98 @@
 - `:Mason` show Mason UI
 - `:TSUpdate` update all Tree-sitter parsers
 - `:ConformInfo` autoformatter information
+
+## Working on text and code
+
+#### <abbr title="blink.cmp">Autocomplete </abbr>
+
+- `<C-space>` show Autocompletion manually
+- `<CR>` select and accept
+- `<C-p>` select previous
+- `<C-n>` select next
+- `<C-k>` select signature
+
+#### <abbr title="conform.nvim">Autoformatter</abbr>
+
+- `<leader>f` format
+
+#### Text editing
+
+##### <abbr title="mini.ai">around & inside textobject</abbr>
+
+- `a` around
+- `i` inside
+- `g[` goto start of `a` textobject
+- `g]` goto end of `a` textobject
+
+##### <abbr title="mini.move">move selection </abbr>
+
+Move selection in visual mode or current line
+
+- `<M-h>` left
+- `<M-j>` down
+- `<M-k>` up
+- `<M-l>` right
+
+##### <abbr title="mini.surround">surround</abbr>
+
+- `ys{motion}{char}` add surrounding in Normal and Visual modes
+- `ds{char}` delete surrounding
+- `cs{target}{replacement}` replace surrounding
+- `hs` highlight surrounding
+
+- `l` suffix to search with "prev" method
+- `n` suffix to search with "next" method
+
+#### <abbr title="nvim-treesitter">Treesitter</abbr>
+
+##### Incremental selection
+
+- `<C-space>` init selection
+- `<C-space>` node incremental
+- `bs` node decremental
+
+##### Textobjects
+
+- `af` select outer part of a method/function definition
+- `if` select inner part of a method/function definition
+- `ac` select outer part of a class
+- `ic` select inner part of a class
+
+##### Swap with next object
+
+- `<leader>na` swap parameter/argument with next
+- `<leader>pa` swap parameter/argument with next
+- `<leader>nm` swap function with next
+- `<leader>pm` swap function with next
+
+##### Move
+
+- `]f` Next method/function def start
+- `]F` Next method/function def end
+- `]c` Next class start
+- `]C` Next class end
+- `]a` Next parameter/arguement start
+- `]A` Next parameter/arguement end
+
+- `[f` Prev method/function def start
+- `[F` Prev method/function def end
+- `[c` Prev class start
+- `[C` Prev class end
+- `[a` Prev parameter/arguement start
+- `[A` Prev parameter/arguement end
+
+#### LSP
+
+#### Diagnostics
+
+## Working with files and navigating between files
+
+## Git Integration
+
+## Miscellaneous
+
+### <abbr title=""></abbr>
 
 <!-- ## NAVIGATING -->
 <!---->

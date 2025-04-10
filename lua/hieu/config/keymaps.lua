@@ -40,4 +40,15 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Oil keymaps
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
+-- Eye-friendly scrolling
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
+-- Smart Paste without losing clipboard
+vim.keymap.set('x', '<leader>p', [["_dP]])
+
+-- Repeat treesitter movement with ; and ,
+-- ensure ; goes forward and , goes backward regardless of the last direction
+local ts_repeat_move = require 'nvim-treesitter.textobjects.repeatable_move'
+vim.keymap.set({ 'n', 'x', 'o' }, ';', ts_repeat_move.repeat_last_move_next)
+vim.keymap.set({ 'n', 'x', 'o' }, ',', ts_repeat_move.repeat_last_move_previous)

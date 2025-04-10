@@ -3,19 +3,32 @@ return {
   'echasnovski/mini.nvim',
   config = function()
     -- Better Around/Inside textobjects
-    --
-    -- Examples:
-    --  - va)  - [V]isually select [A]round [)]paren
-    --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
-    --  - ci'  - [C]hange [I]nside [']quote
-    require('mini.ai').setup { n_lines = 500 }
+    require('mini.ai').setup {
+      mappings = {
+        -- Disable some default mappings
+        around_next = '',
+        inside_next = '',
+        around_last = '',
+        inside_last = '',
+      },
+      n_lines = 500,
+    }
 
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
-    --
-    -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-    -- - sd'   - [S]urround [D]elete [']quotes
-    -- - sr)'  - [S]urround [R]eplace [)] [']
-    require('mini.surround').setup()
+    require('mini.surround').setup {
+      mappings = {
+        add = 'ys', -- Add surrounding in Normal and Visual modes
+        delete = 'ds', -- Delete surrounding
+        replace = 'cs', -- Replace surrounding
+        highlight = 'hs', -- Highlight surrounding
+        find = '', -- Find surrounding (to the right)
+        find_left = '', -- Find surrounding (to the left)
+        update_n_lines = '', -- Update `n_lines`
+
+        suffix_last = 'l', -- Suffix to search with "prev" method
+        suffix_next = 'n', -- Suffix to search with "next" method
+      },
+    }
 
     -- Simple and easy statusline.
     --  You could remove this setup call if you don't like it,
@@ -36,8 +49,5 @@ return {
 
     -- Mini icons
     require('mini.icons').setup()
-
-    -- Autopairs
-    require('mini.pairs').setup()
   end,
 }

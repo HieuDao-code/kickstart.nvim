@@ -25,10 +25,10 @@ return {
     incremental_selection = {
       enable = true,
       keymaps = {
-        init_selection = 'gnn', -- set to `false` to disable one of the mappings
-        node_incremental = 'grn',
-        scope_incremental = 'grc',
-        node_decremental = 'grm',
+        init_selection = '<C-space>',
+        node_incremental = '<C-space>',
+        scope_incremental = false,
+        node_decremental = '<bs>',
       },
     },
     textobjects = {
@@ -42,8 +42,6 @@ return {
           ['if'] = { query = '@function.inner', desc = 'Select inner part of a method/function definition' },
           ['ac'] = { query = '@class.outer', desc = 'Select outer part of a class' },
           ['ic'] = { query = '@class.inner', desc = 'Select inner part of a class' },
-          ['al'] = { query = '@loop.outer', desc = 'Select outer part of a loop' },
-          ['il'] = { query = '@loop.inner', desc = 'Select inner part of a loop' },
         },
         include_surrounding_whitespace = true,
       },
@@ -63,24 +61,24 @@ return {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
-        [']m'] = { query = '@function.outer', desc = 'Next method/function def start' },
+        [']f'] = { query = '@function.outer', desc = 'Next method/function def start' },
         [']c'] = { query = '@class.outer', desc = 'Next class start' },
-        [']l'] = { query = '@loop.outer', desc = 'Next loop start' },
+        [']a'] = { query = '@parameter.inner', desc = 'Next parameter/argument start' },
       },
       goto_next_end = {
-        [']M'] = { query = '@function.outer', desc = 'Next method/function def end' },
+        [']F'] = { query = '@function.outer', desc = 'Next method/function def end' },
         [']C'] = { query = '@class.outer', desc = 'Next class end' },
-        [']L'] = { query = '@loop.outer', desc = 'Next loop end' },
+        [']A'] = { query = '@parameter.inner', desc = 'Next parameter/argument end' },
       },
       goto_previous_start = {
-        ['[m'] = { query = '@function.outer', desc = 'Prev method/function def start' },
+        ['[f'] = { query = '@function.outer', desc = 'Prev method/function def start' },
         ['[c'] = { query = '@class.outer', desc = 'Prev class start' },
-        ['[l'] = { query = '@loop.outer', desc = 'Prev loop start' },
+        ['[a'] = { query = '@parameter.inner', desc = 'Prev parameter/argument start' },
       },
       goto_previous_end = {
-        ['[M'] = { query = '@function.outer', desc = 'Prev method/function def end' },
+        ['[F'] = { query = '@function.outer', desc = 'Prev method/function def end' },
         ['[C'] = { query = '@class.outer', desc = 'Prev class end' },
-        ['[L'] = { query = '@loop.outer', desc = 'Prev loop end' },
+        ['[A'] = { query = '@parameter.inner', desc = 'Prev parameter/argument end' },
       },
     },
   },
