@@ -47,8 +47,11 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 -- Smart Paste without losing clipboard
 vim.keymap.set('x', '<leader>p', [["_dP]])
 
--- Repeat treesitter movement with ; and ,
--- ensure ; goes forward and , goes backward regardless of the last direction
-local ts_repeat_move = require 'nvim-treesitter.textobjects.repeatable_move'
-vim.keymap.set({ 'n', 'x', 'o' }, ';', ts_repeat_move.repeat_last_move_next)
-vim.keymap.set({ 'n', 'x', 'o' }, ',', ts_repeat_move.repeat_last_move_previous)
+-- Jump to to-do commands
+vim.keymap.set('n', ']t', function()
+  require('todo-comments').jump_next()
+end, { desc = 'Next todo comment' })
+
+vim.keymap.set('n', '[t', function()
+  require('todo-comments').jump_prev()
+end, { desc = 'Previous todo comment' })

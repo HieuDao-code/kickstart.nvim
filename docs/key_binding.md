@@ -9,6 +9,7 @@
 - `:checkhealth [<pluginname>]` check base or plugin status
 - `:checkhealth lsp` show details of LSP attached to buffer
 - `:Lazy` show package manager UI
+- `:Lazy profile` show startup time
 - `:Mason` show Mason UI
 - `:TSUpdate` update all Tree-sitter parsers
 - `:ConformInfo` autoformatter information
@@ -25,18 +26,18 @@
 
 #### <abbr title="conform.nvim">Autoformatter</abbr>
 
-- `<leader>f` format
+- `<leader>` format
 
 #### Text editing
 
-##### <abbr title="mini.ai">around & inside textobject</abbr>
+##### <abbr title="mini.ai">Around & Inside textobject</abbr>
 
 - `a` around
 - `i` inside
 - `g[` goto start of `a` textobject
 - `g]` goto end of `a` textobject
 
-##### <abbr title="mini.move">move selection </abbr>
+##### <abbr title="mini.move">Move selection </abbr>
 
 Move selection in visual mode or current line
 
@@ -45,7 +46,7 @@ Move selection in visual mode or current line
 - `<M-k>` up
 - `<M-l>` right
 
-##### <abbr title="mini.surround">surround</abbr>
+##### <abbr title="mini.surround">Surround</abbr>
 
 - `ys{motion}{char}` add surrounding in Normal and Visual modes
 - `ds{char}` delete surrounding
@@ -79,19 +80,29 @@ Move selection in visual mode or current line
 
 ##### Move
 
-- `]f` Next method/function def start
-- `]F` Next method/function def end
-- `]c` Next class start
-- `]C` Next class end
-- `]a` Next parameter/arguement start
-- `]A` Next parameter/arguement end
+- `]f` next method/function def start
+- `]F` next method/function def end
+- `]c` next class start
+- `]C` next class end
+- `]a` next parameter/arguement start
+- `]A` next parameter/arguement end
 
-- `[f` Prev method/function def start
-- `[F` Prev method/function def end
-- `[c` Prev class start
-- `[C` Prev class end
-- `[a` Prev parameter/arguement start
-- `[A` Prev parameter/arguement end
+- `[f` prev method/function def start
+- `[F` prev method/function def end
+- `[c` prev class start
+
+- `[a` prev parameter/arguement start
+- `[A` prev parameter/arguement end
+
+#### Zen mode
+
+- `<leader>z` toggle zen mode
+- `<leader>Z` toggle zoom
+
+#### TO-DO comments
+
+- `]t` move to next to-do comments
+- `[t` move to previous to-do comments
 
 #### LSP
 
@@ -214,3 +225,5 @@ Move selection in visual mode or current line
 <!-- - `gf` open file under cursor in a new buffer -->
 <!-- - `gx` open link under cursor in default browser -->
 <!-- - `*` search word under cursor -->
+
+-- TODO this should be done soon
