@@ -94,12 +94,12 @@ Move selection in visual mode or current line
 - `[a` prev parameter/arguement start
 - `[A` prev parameter/arguement end
 
-#### Zen mode
+#### <abbr title="snacks.zen">Zen mode</abbr>
 
 - `<leader>z` toggle zen mode
 - `<leader>Z` toggle zoom
 
-#### TO-DO comments
+#### <abbr title="todo-comments.nvim">TO-DO comments</abbr>
 
 - `]t` move to next to-do comments
 - `[t` move to previous to-do comments
