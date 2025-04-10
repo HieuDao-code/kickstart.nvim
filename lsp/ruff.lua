@@ -1,5 +1,5 @@
 return {
-  cmd = { 'ruff' },
+  cmd = { 'ruff', 'server' },
   filetypes = { 'python' },
   root_markers = {
     'pyproject.toml',
@@ -8,5 +8,7 @@ return {
     'requirements.txt',
     'Pipfile',
     'pyrightconfig.json',
+    'ruff.toml',
   },
+  settings = {},
 }

@@ -51,7 +51,6 @@ Move selection in visual mode or current line
 - `ys{motion}{char}` add surrounding in Normal and Visual modes
 - `ds{char}` delete surrounding
 - `cs{target}{replacement}` replace surrounding
-- `hs` highlight surrounding
 
 - `l` suffix to search with "prev" method
 - `n` suffix to search with "next" method

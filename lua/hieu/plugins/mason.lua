@@ -10,9 +10,9 @@ return {
         'stylua', -- Used to format Lua code
         'ruff', -- Used to lint and format Python code
         'pyright', -- Static type checker for Python
-        'prettier', -- Prettier is an opinionated code formatter
+        'prettier', -- Prettier is an opinionated code formatter for JSON, YAML, Markdown
         'taplo', -- Used to lint and format toml files
-        'harper-ls', -- Spell checker
+        'harper-ls', -- Grammar checker
       },
     },
   },
