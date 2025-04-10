@@ -98,7 +98,7 @@ Move selection in visual mode or current line
 - `<leader>z` toggle zen mode
 - `<leader>Z` toggle zoom
 
-#### <abbr title="todo-comments.nvim">TO-DO comments</abbr>
+#### <abbr title="todo-comments.nvim">To-do comments</abbr>
 
 - `]t` move to next to-do comments
 - `[t` move to previous to-do comments
