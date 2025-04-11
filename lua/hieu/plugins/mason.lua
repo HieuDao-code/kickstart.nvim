@@ -12,7 +12,6 @@ return {
         'pyright', -- Static type checker for Python
         'prettier', -- Prettier is an opinionated code formatter for JSON, YAML, Markdown
         'taplo', -- Used to lint and format toml files
-        'harper-ls', -- Grammar checker
       },
     },
   },
@@ -22,7 +21,15 @@ return {
     'williamboman/mason-lspconfig.nvim',
     dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
     opts = {
-      ensure_installed = { 'lua_ls', 'pyright', 'ruff', 'marksman', 'yamlls', 'taplo' },
+      ensure_installed = {
+        'lua_ls', -- Lua
+        'pyright', -- Python
+        'ruff', -- Python
+        'marksman', -- Markdown
+        'yamlls', -- YAML
+        'taplo', -- TOML
+        'harper_ls', -- English grammar
+      },
     },
   },
 }
