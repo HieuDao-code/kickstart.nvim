@@ -156,6 +156,33 @@ Move selection in visual mode or current line
 
 #### <abbr title="gitsigns.nvim">Gitsigns</abbr>
 
+##### Navigation
+
+- `]c` jump to next git change
+- `]c` jump to previous git change
+
+##### Visual mode
+
+- `<leader>hs` git stage hunk
+- `<leader>hr` git reset hunk
+
+##### Normal mode
+
+- `<leader>hs` git stage hunk
+- `<leader>hr` git reset hunk
+- `<leader>hu` git undo stage hunk
+- `<leader>hp` git preview hunk
+- `<leader>hS` git stage buffer
+- `<leader>hR` git reset buffer
+- `<leader>hb` git blame
+- `<leader>hd` git diff against index
+- `<leader>hD` git diff against last commit
+
+##### Toggles
+
+- `<leader>tb` toggle git show blame line
+- `<leader>tD` toggle git show deleted
+
 #### <abbr title="vim-fugitive">Fugitive</abbr>
 
 ## Miscellaneous

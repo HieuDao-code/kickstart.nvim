@@ -4,8 +4,20 @@ Inspired by <https://github.com/nvim-lua/kickstart.nvim>.
 
 ## Installation
 
-1. Install Neovim>=0.11 (native LSP setup)
-1. Install the external dependencies: git, make, unzip, C Compiler (gcc), ripgrep, Clipboard tool (xclip), Python
+1. Install Neovim>=0.11 (native LSP setup).
+1. Install the external dependencies.
+
+#### Linux Install
+
+<details><summary>Ubuntu Install Steps</summary>
+
+```
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update
+sudo apt install make gcc ripgrep unzip git xclip neovim
+```
+
+</details>
 1. Clone this Git repository by replacing `<REPO>` with `<your_github_username>` in the commands below (Linux and Mac):
 
 ```sh
@@ -51,8 +63,8 @@ I use the plugin manager [**lazy.nvim**](https://github.com/folke/lazy.nvim) to 
 
 | Name                                                        | Purpose                         | Dependencies | Notes |
 | ----------------------------------------------------------- | ------------------------------- | ------------ | ----- |
-| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Deep buffer integration for Git |              | ❌    |
-| [vim-fugitive](https://github.com/tpope/vim-fugitive)       | Vim plugin for Git              |              | ❌    |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Deep buffer integration for Git |              | ✔️    |
+| [vim-fugitive](https://github.com/tpope/vim-fugitive)       | Git plugin for Vim              |              | ❌    |
 
 ### Miscellaneous
 
@@ -62,20 +74,20 @@ I use the plugin manager [**lazy.nvim**](https://github.com/folke/lazy.nvim) to 
 | [mini.icons](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-icons.md)           | File and folder icons                                            |              | ✔️    |
 | [mini.statusline](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-statusline.md) | Minimal and fast statusline module                               |              | ✔️    |
 | [obsidian.nvim](https://github.com/obsidian-nvim/obsidian.nvim)                                  | Plugin for Obsidian                                              |              | ❌    |
-| [which-key.nvim](https://github.com/folke/which-key.nvim)                                        | Show available keybindings in a popup as you type                |              | ❌    |
+| [which-key.nvim](https://github.com/folke/which-key.nvim)                                        | Show available keybindings in a popup as you type                |              | ✔️    |
 
 ## Language Server Protocol, Debug Adapter Protocol, Linter and Formatter
 
 The LSP (Language Server Protocol), DAP (Debug Adapter Protocol), Linter and Formatter will be installed by the package manager [Mason](https://github.com/williamboman/mason.nvim) (with dependencies: [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig), [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim), [mason-tool-installer.nvim](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim), [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim)).
 
-| Name                                                                   | Language             | Purpose                   | Notes                                                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------- | -------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**debugpy**](https://github.com/microsoft/debugpy)                    | Python               | DAP                       |                                                                                                                                                                                                                                                                                   |
-| [**harper_ls**](https://github.com/automattic/harper)                  | English :smile:      | Linter                    | Grammar Checker                                                                                                                                                                                                                                                                   |
-| [**lua_ls**](https://github.com/LuaLS/lua-language-server)             | Lua                  | LSP                       | [lazydev.nvim](https://github.com/folke/lazydev.nvim) is a plugin that properly configures LuaLS.                                                                                                                                                                                 |
-| [**prettier**](https://github.com/prettier/prettier)                   | JSON, Markdown, YAML | Formatter                 |                                                                                                                                                                                                                                                                                   |
-| [**pyright**](https://github.com/Microsoft/pyright)                    | Python               | LSP                       | Need to install [Node.js](https://github.com/nodesource/distributions?tab=readme-ov-file#debian-and-ubuntu-based-distributions) because Pyright is written in Typescript. Ruff LSP will be an alternative to pyright [soon](https://github.com/astral-sh/ruff/discussions/16455). |
-| [**ruff**](https://github.com/astral-sh/ruff)                          | Python               | LSP, Linter and Formatter |                                                                                                                                                                                                                                                                                   |
-| [**stylua**](https://github.com/JohnnyMorganz/StyLua)                  | Lua                  | Formatter                 |                                                                                                                                                                                                                                                                                   |
-| [**taplo**](https://github.com/tamasfe/taplo/tree/master)              | TOML                 | LSP, Linter and Formatter |                                                                                                                                                                                                                                                                                   |
-| [**yamlls**](https://github.com/redhat-developer/yaml-language-server) | YAML                 | LSP                       |                                                                                                                                                                                                                                                                                   |
+| Name                                                               | Language             | Purpose                   | Notes                                                                                                                                                                                                                                                                             |
+| ------------------------------------------------------------------ | -------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [debugpy](https://github.com/microsoft/debugpy)                    | Python               | DAP                       |                                                                                                                                                                                                                                                                                   |
+| [harper_ls](https://github.com/automattic/harper)                  | English :smile:      | Linter                    | Grammar Checker                                                                                                                                                                                                                                                                   |
+| [lua_ls](https://github.com/LuaLS/lua-language-server)             | Lua                  | LSP                       | [lazydev.nvim](https://github.com/folke/lazydev.nvim) is a plugin that properly configures LuaLS.                                                                                                                                                                                 |
+| [prettier](https://github.com/prettier/prettier)                   | JSON, Markdown, YAML | Formatter                 |                                                                                                                                                                                                                                                                                   |
+| [pyright](https://github.com/Microsoft/pyright)                    | Python               | LSP                       | Need to install [Node.js](https://github.com/nodesource/distributions?tab=readme-ov-file#debian-and-ubuntu-based-distributions) because Pyright is written in Typescript. Ruff LSP will be an alternative to pyright [soon](https://github.com/astral-sh/ruff/discussions/16455). |
+| [ruff](https://github.com/astral-sh/ruff)                          | Python               | LSP, Linter and Formatter |                                                                                                                                                                                                                                                                                   |
+| [stylua](https://github.com/JohnnyMorganz/StyLua)                  | Lua                  | Formatter                 |                                                                                                                                                                                                                                                                                   |
+| [taplo](https://github.com/tamasfe/taplo/tree/master)              | TOML                 | LSP, Linter and Formatter |                                                                                                                                                                                                                                                                                   |
+| [yamlls](https://github.com/redhat-developer/yaml-language-server) | YAML                 | LSP                       |                                                                                                                                                                                                                                                                                   |
