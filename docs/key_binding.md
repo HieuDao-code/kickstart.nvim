@@ -130,6 +130,10 @@ Move selection in visual mode or current line
 
 #### <abbr title="harpoon">Harpoon</abbr>
 
+- `<leader>a` attach harpoon to file
+- `<leader>e` open harpoon quick menu
+- `1`,`2`,`3`,`4`,`5` open harpoon file
+
 #### <abbr title="oil.nvim">Oil</abbr>
 
 - `-` open parent directory

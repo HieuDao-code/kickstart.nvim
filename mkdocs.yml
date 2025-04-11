@@ -1,7 +1,10 @@
 site_name: My Neovim Configuration
 site_url: https://hieudao-code.github.io/hieu.nvim.config
+repo_url: https://hieudao-code.github.io/hieu.nvim.config
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/git-alt
   features:
     - content.code.copy
     - content.tooltips
