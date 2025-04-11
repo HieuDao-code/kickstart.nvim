@@ -18,7 +18,7 @@
 
 #### <abbr title="blink.cmp">Autocomplete </abbr>
 
-- `<C-space>` show Autocompletion manually
+- `<C-space>` show autocompletion manually
 - `<CR>` select and accept
 - `<C-p>` select previous
 - `<C-n>` select next
@@ -103,9 +103,23 @@ Move selection in visual mode or current line
 - `]t` move to next to-do comments
 - `[t` move to previous to-do comments
 
-#### LSP
+#### Language Server Protocol
+
+- `grn` rename variable
+- `gra` go to code action
+- `grr` go to references
+- `gri` go to implementation
+- `grd` go to definition
+- `grD` go to declaration
+- `grt` go to type definition
+- `g0` open document symbols
+- `gW` open workspace symbols
 
 #### Diagnostics
+
+- `<leader>q` open diagnostic quickfix list
+- `]d` move next diagnostics in the current buffer
+- `[d` move previous diagnostics in the current buffer
 
 ## Working with files and navigating between files
 
