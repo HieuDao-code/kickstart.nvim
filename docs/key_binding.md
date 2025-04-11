@@ -128,6 +128,30 @@ Move selection in visual mode or current line
 
 ## Working with files and navigating between files
 
+#### <abbr title="harpoon">Harpoon</abbr>
+
+#### <abbr title="oil.nvim">Oil</abbr>
+
+- `-` open parent directory
+
+#### <abbr title="telescope.nvim">Telescope</abbr>
+
+- `<leader>sh` search help
+- `<leader>sk` search keymaps
+- `<leader>sf` search files
+- `<leader>ss` search select telescope
+- `<leader>sw` search current word
+- `<leader>sg` search by grep
+- `<leader>sd` search diagnostics
+- `<leader>sr` search resume
+- `<leader>s.` search recent files ("." for repeat)
+- `<leader>sb` search existing buffers
+- `<leader>/` fuzzily search in current buffer
+- `<leader>s/` search in open files
+- `<leader>sn` search neovim files
+
+#### <abbr title="tmux">Tmux</abbr>
+
 ## Git Integration
 
 ## Miscellaneous
