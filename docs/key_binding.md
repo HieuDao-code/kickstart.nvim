@@ -122,10 +122,6 @@ Move selection in visual mode or current line
 - `]d` move next diagnostics in the current buffer
 - `[d` move previous diagnostics in the current buffer
 
-#### Obsidian
-
--
-
 ## Working with files and navigating between files
 
 #### <abbr title="harpoon">Harpoon</abbr>
@@ -158,9 +154,13 @@ Move selection in visual mode or current line
 
 ## Git Integration
 
+#### <abbr title="gitsigns.nvim">Gitsigns</abbr>
+
+#### <abbr title="vim-fugitive">Fugitive</abbr>
+
 ## Miscellaneous
 
-### <abbr title=""></abbr>
+#### <abbr title="obsidian.nvim">Obsidian</abbr>
 
 <!-- ## NAVIGATING -->
 <!---->
@@ -271,5 +271,3 @@ Move selection in visual mode or current line
 <!-- - `gf` open file under cursor in a new buffer -->
 <!-- - `gx` open link under cursor in default browser -->
 <!-- - `*` search word under cursor -->
-
--- TODO this should be done soon
