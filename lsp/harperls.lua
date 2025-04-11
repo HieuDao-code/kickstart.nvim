@@ -19,6 +19,7 @@ return {
   settings = {
     ['harper-ls'] = {
       linters = {
+        OxfordComma = false,
         SentenceCapitalization = false,
         SpellCheck = false,
       },

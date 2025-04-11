@@ -114,12 +114,17 @@ Move selection in visual mode or current line
 - `grt` go to type definition
 - `g0` open document symbols
 - `gW` open workspace symbols
+- `<leader>th` toggle inlay hints
 
 #### Diagnostics
 
 - `<leader>q` open diagnostic quickfix list
 - `]d` move next diagnostics in the current buffer
 - `[d` move previous diagnostics in the current buffer
+
+#### Obsidian
+
+-
 
 ## Working with files and navigating between files
 
